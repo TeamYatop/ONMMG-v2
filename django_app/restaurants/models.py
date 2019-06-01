@@ -18,9 +18,12 @@ CUISINE = (
 )
 
 
-class restaurant(models.Model):
+class Restaurant(models.Model):
     title = models.CharField(max_length=100)
     latitude = models.DecimalField(max_digits=20, decimal_places=15)
     longitude = models.DecimalField(max_digits=20, decimal_places=15)
     price_range = models.CharField(max_length=4, choices=PRICE_RANGE)
     cuisine = models.CharField(max_length=3, choices=CUISINE)
+
+    def __str__(self):
+        return 'restaurant({})'.format(self.title)
