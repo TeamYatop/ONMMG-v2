@@ -2,7 +2,7 @@
 # Created by https://www.gitignore.io/api/node,vuejs,linux,macos,django,python,pycharm,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=node,vuejs,linux,macos,django,python,pycharm,visualstudiocode
 
-### Custome
+### Custom
 .idea/
 
 ### Django ###
