@@ -1,0 +1,39 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+<div class="container overflow-hidden">
+    <h2>index.html</h2>
+    <p>Main page</p>
+    <div id="app">
+        [[message]]
+        <ul>
+            <li v-for="person in people">
+                <a :href="person.url">
+                    [[ person.name ]]
+                </a>
+                <button @click="greet(person.name)">
+                    hey
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    var app = new Vue({
+        delimiters: ['[[', ']]'],
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            people: [],
+        },
+        methods: {
+            greet: function (name) {
+                console.log('Hello from ' + name + '!')
+            }
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+<div class="container overflow-hidden">
+    <h2>create.html</h2>
+    <p>Create page</p>
+    <div id="app">
+        <div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    var app = new Vue({
+        delimiters: ['[[', ']]'],
+        el: '#app',
+        data: {
+        },
+        methods: {
+        },
+    });
+</script>
+{% endblock %}

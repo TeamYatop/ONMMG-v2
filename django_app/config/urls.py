@@ -23,4 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('api/', include('api.urls')),
+    path('', include('restaurants.urls', namespace='restaurants')),
+
 ]
